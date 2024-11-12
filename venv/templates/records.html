@@ -1,0 +1,29 @@
+{% extends 'dashboard.html' %}
+
+{% block title %}Lemon - Records{% endblock %}
+
+{% block dashboard %}
+<li class="nav-item">
+    <a class="nav-link" href="{{ url_for('dashboard') }}">
+        <img src="{{ url_for('static', filename='images/data-analysis.png') }}" alt="">
+        <span>Dashboard</span>
+    </a>
+</li>
+{% endblock %}
+
+{% block records %}
+<li class="nav-item active">
+    <a class="nav-link" href="{{ url_for('records') }}">
+        <img src="{{ url_for('static', filename='images/folder.png') }}" alt="">
+        <span>Records</span></a>
+</li>
+
+{% endblock %}
+
+{% block PageHeading%}
+<h1 class="h3 mb-0 text-gray-800 pl-2">Records</h1>
+{% endblock %}
+
+{% block data %}
+<p class="pt-4 pl-2">no data available</p>
+{% endblock %}

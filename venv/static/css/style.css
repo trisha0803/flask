@@ -1,0 +1,48 @@
+/* this media query is to change the image of the logo if the screen size is below 723*/
+@media (max-width: 767.5px) {
+    .sidebar-brand-icon img {
+        content: url("{{ url_for('static', filename='images/logo-small.png') }}");
+        width: 100%;
+    }
+}
+
+.progress {
+    transform: rotate(270deg); /* Rotate the progress bar */
+    transform-origin: bottom right; /* Adjust the origin of rotation */
+    appearance: none; /* Remove default styling */
+    position: relative; /* Position relative for absolute child positioning */
+}
+
+.progress-container {
+    margin-top: -9%;
+    margin-right: 28%;
+}
+
+.progress-bar {
+    height: 170px; /* Ensure the height of the progress bar is consistent */
+}
+
+.progress-text {
+    position: absolute; /* Absolute positioning to center it within the progress */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%) rotate(90deg); /* Center and rotate the text */
+    z-index: 1; /* Ensure the text is above the progress bar */
+    margin: 0; /* Remove default margin */
+    font-size: 2rem; /* Adjust font size as needed */
+}
+
+/* Color styles for the text */
+.text-primary {
+    color: blue; /* Replace with your primary color */
+}
+
+.text-white {
+    color: white;
+}
+
+.text-gradient {
+    background: linear-gradient(to bottom, blue 50%, white 50%);
+    color: transparent; /* Text transparent to show gradient */
+    background-clip: text; /* Standard syntax */
+}
